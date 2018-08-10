@@ -9,7 +9,7 @@ $data_string = '{"jsonrpc":"2.0","method":"on_getblockhash","params":[5]}'; // A
 // $bcheight = $_POST['bcheight'];
 // $data_string = '{"jsonrpc":"2.0","method":"on_getblockhash","params":[' . "$bcheight" . ']}';
 
-$ch = curl_init('http://localhost:12385/json_rpc');
+$ch = curl_init('http://localhost:4242/json_rpc'); // Or whatever port you run the daemon on
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
